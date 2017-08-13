@@ -7,7 +7,7 @@
 class SetTriggerIndicatorAction: public CommunicatorAction {
 public:
     SetTriggerIndicatorAction(): CommunicatorAction() {
-        alias = 't';
+        alias = "t";
     }
     void run();
 };

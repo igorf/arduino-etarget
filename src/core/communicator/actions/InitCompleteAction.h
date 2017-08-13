@@ -6,7 +6,7 @@
 class InitCompleteAction: public CommunicatorAction {
 public:
     InitCompleteAction(): CommunicatorAction() {
-        alias = 'i';
+        alias = "i";
     }
     void run();
 };

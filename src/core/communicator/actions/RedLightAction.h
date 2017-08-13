@@ -7,7 +7,7 @@
 class RedLightAction: public CommunicatorAction {
 public:
     RedLightAction(): CommunicatorAction() {
-        alias = '2';
+        alias = "2";
     }
     void run();
 };

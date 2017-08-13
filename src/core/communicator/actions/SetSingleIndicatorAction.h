@@ -7,7 +7,7 @@
 class SetSingleIndicatorAction: public CommunicatorAction {
 public:
     SetSingleIndicatorAction(): CommunicatorAction() {
-        alias = 's';
+        alias = "s";
     }
     void run();
 };

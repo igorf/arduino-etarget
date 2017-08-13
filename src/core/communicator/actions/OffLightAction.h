@@ -6,7 +6,7 @@
 class OffLightAction: public CommunicatorAction {
 public:
     OffLightAction(): CommunicatorAction() {
-        alias = '0';
+        alias = "0";
     }
     void run();
 };

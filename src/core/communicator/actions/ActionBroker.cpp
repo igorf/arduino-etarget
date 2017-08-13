@@ -23,10 +23,10 @@ const CommunicatorAction* ActionBroker::actions[] = {
         new SetLowBrightnessAction()
 };
 
-CommunicatorAction* ActionBroker::getActionByName(int command) {
+CommunicatorAction* ActionBroker::getActionByName(String command) {
     for (int i = 0; i < ACTIONS; i++) {
         CommunicatorAction* action = (CommunicatorAction *) actions[i];
-        if (action->getAlias() == command) {
+        if (action->match(command)) {
             return action;
         }
     }

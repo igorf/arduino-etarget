@@ -11,7 +11,6 @@ public:
     virtual void off() = 0;
     virtual void setBrightness(int brightness) = 0;
     virtual String getName() = 0;
-    virtual ~LightIndicatorInterface(){};
 };
 
 #endif

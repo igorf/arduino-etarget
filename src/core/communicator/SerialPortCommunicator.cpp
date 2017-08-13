@@ -8,34 +8,22 @@ SerialPortCommunicator::SerialPortCommunicator() {
 
 void SerialPortCommunicator::init() {
     Serial.begin(9600);
+    Serial.setTimeout(20);
 }
 
 void SerialPortCommunicator::read() {
-    if (Serial.available() > 0) {
-        int value = Serial.read();
-
-        CommunicatorAction* action = ActionBroker::getActionByName(value);
-        if (action) {
-            action->run();
-            if (action->getOutput() && action->getOutput() != "") {
-                buffer = action->getOutput();
-            }
+    String message = Serial.readStringUntil('\n');
+    message.trim();
+    Serial.print("[" + message + "]\n");
+    CommunicatorAction* action = ActionBroker::getActionByName(message);
+    if (action) {
+        action->run();
+        if (action->getOutput() && action->getOutput() != "") {
+            Serial.print(action->getOutput());
         }
-    }
-}
-
-void SerialPortCommunicator::sendMessage(String message) {
-    buffer += message + "::" + (millis() - stateChangedTimestamp) + ">" + state + "\n";
-}
-
-void SerialPortCommunicator::write() {
-    if (buffer.length() > 0) {
-        Serial.print(buffer);
-        buffer = "";
     }
 }
 
 void SerialPortCommunicator::communicate() {
     read();
-    write();
 }

@@ -6,7 +6,7 @@
 class GreenLightAction: public CommunicatorAction {
 public:
     GreenLightAction(): CommunicatorAction() {
-        alias = '1';
+        alias = "1";
     }
     void run();
 };

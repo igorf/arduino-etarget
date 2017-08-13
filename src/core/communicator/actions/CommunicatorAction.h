@@ -5,13 +5,14 @@
 
 class CommunicatorAction {
 public:
-    int getAlias();
+    String getAlias();
     String getOutput();
     CommunicatorAction();
+    bool match(String command);
     virtual void run() = 0;
 
 protected:
-    int alias;
+    String alias;
     String output;
 };
 

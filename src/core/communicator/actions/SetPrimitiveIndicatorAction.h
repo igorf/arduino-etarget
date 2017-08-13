@@ -7,7 +7,7 @@
 class SetPrimitiveIndicatorAction: public CommunicatorAction {
 public:
     SetPrimitiveIndicatorAction(): CommunicatorAction() {
-        alias = 'p';
+        alias = "p";
     }
     void run();
 };

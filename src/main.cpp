@@ -8,6 +8,9 @@ void setup() {
 }
 
 void loop() {
-    core->communicate();
     core->detectShot();
+}
+
+void serialEvent() {
+    core->communicate();
 }

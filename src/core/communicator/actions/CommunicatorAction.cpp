@@ -4,10 +4,14 @@ CommunicatorAction::CommunicatorAction() {
     output = "";
 }
 
-int CommunicatorAction::getAlias() {
+String CommunicatorAction::getAlias() {
     return alias;
 }
 
 String CommunicatorAction::getOutput() {
     return output;
+}
+
+bool CommunicatorAction::match(String command) {
+    return alias == command;
 }

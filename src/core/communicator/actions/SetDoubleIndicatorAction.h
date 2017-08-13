@@ -7,7 +7,7 @@
 class SetDoubleIndicatorAction: public CommunicatorAction {
 public:
     SetDoubleIndicatorAction(): CommunicatorAction() {
-        alias = 'd';
+        alias = "d";
     }
     void run();
 };

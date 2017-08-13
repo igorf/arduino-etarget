@@ -6,7 +6,7 @@
 class SetLowBrightnessAction: public CommunicatorAction {
 public:
     SetLowBrightnessAction(): CommunicatorAction() {
-        alias = 'l';
+        alias = "l";
     }
     void run();
 };

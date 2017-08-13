@@ -7,7 +7,7 @@
 class SetHighBrightnessAction: public CommunicatorAction {
 public:
     SetHighBrightnessAction(): CommunicatorAction() {
-        alias = 'h';
+        alias = "h";
     }
     void run();
 };
