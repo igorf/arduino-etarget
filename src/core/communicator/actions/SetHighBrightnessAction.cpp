@@ -7,4 +7,5 @@ void SetHighBrightnessAction::run() {
     if (indicator != NULL) {
         indicator->setBrightness(90);
     }
+    output = "Brightness set to HIGH\n";    
 }

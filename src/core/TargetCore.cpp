@@ -22,6 +22,7 @@ void TargetCore::removeIndicator() {
     if (indicator != NULL) {
         delete indicator;
     }
+    indicator = NULL;
 }
 
 void TargetCore::communicate() {

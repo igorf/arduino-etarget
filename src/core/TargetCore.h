@@ -25,7 +25,7 @@ public:
 
 private:
     static TargetCore* instance;
-    LightIndicatorInterface* indicator;
+    LightIndicatorInterface* indicator = NULL;
     SerialPortCommunicator* communicator;
     AbstractDetector* shotDetector;
     String state = "OFF";

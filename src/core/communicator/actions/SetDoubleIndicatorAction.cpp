@@ -4,7 +4,11 @@
 
 void SetDoubleIndicatorAction::run() {
     LightIndicatorInterface* indicator = TargetCore::getInstance()->getIndicator();
-    if (indicator) {
+    if (indicator != NULL) {
+        if (indicator->getName().equals("DOUBLE_MATRIX")) {
+            output = "indicator is already DOUBLE_MATRIX\n";
+            return;
+        }
         TargetCore::getInstance()->removeIndicator();
     }
     TargetCore::getInstance()->setIndicator("DOUBLE_MATRIX");

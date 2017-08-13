@@ -14,7 +14,8 @@ void SerialPortCommunicator::init() {
 void SerialPortCommunicator::read() {
     String message = Serial.readStringUntil('\n');
     message.trim();
-    Serial.print("[" + message + "]\n");
+    // DEBUG
+    // Serial.print("[" + message + "]\n");
     CommunicatorAction* action = ActionBroker::getActionByName(message);
     if (action) {
         action->run();

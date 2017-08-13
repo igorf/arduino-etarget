@@ -7,7 +7,7 @@ void SetShotDetectorDelayAction::run() {
 }
 
 bool SetShotDetectorDelayAction::match(String command) {
-    if (command.startsWith("detector:delay:1000")) {
+    if (command.startsWith("detector:delay:")) {
         String copy = command;
         copy.remove(0, 15);
         int level = copy.toInt();

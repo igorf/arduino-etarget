@@ -9,6 +9,7 @@ void setup() {
 
 void loop() {
     core->detectShot();
+    delay(3);
 }
 
 void serialEvent() {

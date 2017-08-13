@@ -7,4 +7,5 @@ void SetLowBrightnessAction::run() {
     if (indicator != NULL) {
         indicator->setBrightness(20);
     }
+    output = "Brightness set to LOW\n";
 }
