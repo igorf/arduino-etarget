@@ -8,11 +8,14 @@ public:
     void notify();
     void setSensibility(int sensibility);
     void setDelay(int delay);
+    bool isEnabled();
+    void setEnabled(int value);
 
 protected:
     unsigned long time = 0;
     int threshold;
     int delay;
+    bool enabled = false;
 };
 
 

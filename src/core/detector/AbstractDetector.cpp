@@ -16,5 +16,17 @@ void AbstractDetector::setDelay(int delay) {
 }
 
 void AbstractDetector::setSensibility(int sensibility) {
-    this->threshold = threshold;
+    this->threshold = sensibility;
+}
+
+bool AbstractDetector::isEnabled() {
+    return this->enabled;
+}
+
+void AbstractDetector::setEnabled(int value) {
+    if (value > 0) {
+        this->enabled = true;
+    } else if (value == 0) {
+        this->enabled = false;
+    }
 }

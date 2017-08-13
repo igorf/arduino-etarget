@@ -57,7 +57,7 @@ void TargetCore::setState(String state) {
 }
 
 void TargetCore::detectShot() {
-    if (shotDetector->detect()) {
+    if (shotDetector->isEnabled() && shotDetector->detect()) {
         shotDetector->notify();
     }    
 }

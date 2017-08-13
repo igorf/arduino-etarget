@@ -12,6 +12,7 @@
 #include "SetShotDetectorSensibilityAction.h"
 #include "SetShotDetectorDelayAction.h"
 #include "ResetAction.h"
+#include "SetShotDetectorEnabledAction.h"
 
 const CommunicatorAction* ActionBroker::actions[] = {
         new GreenLightAction(),
@@ -27,6 +28,7 @@ const CommunicatorAction* ActionBroker::actions[] = {
         new SetShotDetectorSensibilityAction(),
         new SetShotDetectorDelayAction(),
         new ResetAction(),
+        new SetShotDetectorEnabledAction()
     };
 
 CommunicatorAction* ActionBroker::getActionByName(String command) {
