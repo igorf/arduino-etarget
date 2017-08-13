@@ -65,3 +65,7 @@ void TargetCore::detectShot() {
 AbstractDetector* TargetCore::getShotDetector() {
     return this->shotDetector;
 }
+
+void TargetCore::reset() {
+    // not implemented yet
+}

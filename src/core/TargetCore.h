@@ -17,6 +17,7 @@ public:
     String getState();
     void setState(String state);
     void detectShot();
+    void reset();
 
     LightIndicatorInterface* getIndicator();
     AbstractDetector* getShotDetector();

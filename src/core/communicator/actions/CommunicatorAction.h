@@ -8,7 +8,7 @@ public:
     String getAlias();
     String getOutput();
     CommunicatorAction();
-    bool match(String command);
+    virtual bool match(String command);
     virtual void run() = 0;
 
 protected:

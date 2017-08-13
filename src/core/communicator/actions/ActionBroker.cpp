@@ -9,6 +9,9 @@
 #include "SetTriggerIndicatorAction.h"
 #include "SetHighBrightnessAction.h"
 #include "SetLowBrightnessAction.h"
+#include "SetShotDetectorSensibilityAction.h"
+#include "SetShotDetectorDelayAction.h"
+#include "ResetAction.h"
 
 const CommunicatorAction* ActionBroker::actions[] = {
         new GreenLightAction(),
@@ -20,11 +23,15 @@ const CommunicatorAction* ActionBroker::actions[] = {
         new SetDoubleIndicatorAction(),
         new SetTriggerIndicatorAction(),
         new SetHighBrightnessAction(),
-        new SetLowBrightnessAction()
-};
+        new SetLowBrightnessAction(),
+        new SetShotDetectorSensibilityAction(),
+        new SetShotDetectorDelayAction(),
+        new ResetAction(),
+    };
 
 CommunicatorAction* ActionBroker::getActionByName(String command) {
-    for (int i = 0; i < ACTIONS; i++) {
+    int actionsCount = sizeof(actions) / sizeof(CommunicatorAction*);
+    for (int i = 0; i < actionsCount; i++) {
         CommunicatorAction* action = (CommunicatorAction *) actions[i];
         if (action->match(command)) {
             return action;

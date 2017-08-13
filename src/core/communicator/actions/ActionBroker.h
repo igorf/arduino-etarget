@@ -7,7 +7,6 @@ class ActionBroker {
 public:
     static CommunicatorAction* getActionByName(String command);
 protected:
-    static const int ACTIONS = 10;
     static const CommunicatorAction* actions[];
 };
 
